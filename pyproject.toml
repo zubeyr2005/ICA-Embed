@@ -1,0 +1,16 @@
+[project]
+name = "ica-embed"
+version = "0.1.0"
+description = "ICA component profiles for text and rendered fonts"
+requires-python = ">=3.12"
+dependencies = [
+  "numpy>=2.0", "scipy>=1.17", "scikit-learn>=1.8", "python-picard>=0.8",
+]
+
+[project.optional-dependencies]
+fonts = ["torch>=2.9", "transformers>=5.1", "pillow>=12", "fonttools>=4.0", "requests>=2.32"]
+text = ["mlx-embeddings>=0.1; sys_platform == 'darwin' and platform_machine == 'arm64'"]
+
+[tool.ruff]
+cache-dir = "ignore/cache/ruff"
+line-length = 100
